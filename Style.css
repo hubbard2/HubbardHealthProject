@@ -1,0 +1,235 @@
+/* Global Styles */
+:root {
+  --primary-color: rgba(139, 0, 0, 1);
+  --accent-color: rgba(194, 174, 119, 1);
+  --page-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--page-font);
+  line-height: 1.75;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6, a {
+  font-family: var(--page-font);
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.75rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3, a {
+  font-size: 1.5rem;
+}
+
+p, li {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+}
+
+/* Layout */
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+article {
+  margin: 10px;
+}
+
+/* Keep original header styling */
+header {
+  justify-content: space-evenly;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+}
+
+header.title nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+header.title nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+header.title nav a:hover,
+header.title nav a:visited:hover {
+  color: var(--primary-color);
+  font-weight: 800;
+}
+
+
+a:active {
+  color: whitesmoke;
+} 
+
+.profile-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, .5);
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: translateX(-50%);
+}
+
+/* Sections */
+section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+section p {
+  color: var(--text-color);
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: var(--medium-gray);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.testimonial {
+  font-style: italic;
+  border-left: 5px solid var(--accent-color);
+  padding-left: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+/* CTA */
+.cta {
+  background: var(--accent-color);
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta p {
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.15rem;
+}
+
+.cta button {
+  padding: 0.85rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background: white;
+  color: var(--accent-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cta button:hover {
+  background: #e0f4e9;
+}
+
+/* Footer */
+footer {
+  background-color: var(--medium-gray);
+  color: var(--dark-gray);
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.875rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.25rem;
+  }
+
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    bottom: -60px;
+  }
+
+  .cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta p {
+    font-size: 1rem;
+  }
+}
+
+/* Animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease 1.2s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Utility */
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0b5ed7;
+}
